@@ -325,7 +325,11 @@ class StoryMenuState extends MusicBeatState
 
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
+#if android
 
+addVirtualPad(FULL, A_B);
+
+#end
 		super.update(elapsed);
 	}
 
